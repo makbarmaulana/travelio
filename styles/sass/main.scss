@@ -1,6 +1,6 @@
 @use './base/resets';
 @use './base/variables';
 @use './base/mixins';
-@use './base/typography';
 
-@use './components/container.scss';
+@use './components/container';
+@use './components/header';

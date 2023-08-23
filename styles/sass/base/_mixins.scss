@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+@mixin minBreakpoint($screen) {
+  @media screen and (min-width: map-get($breakpoints, $screen)) {
+    @content;
+  }
+}
+
+@mixin flexbox($direction: row, $align: start, $justify: start) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}

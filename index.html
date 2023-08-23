@@ -8,8 +8,12 @@
   <meta description=""
     content="Explore the world with Travelio - your gateway to unforgettable journeys. Discover stunning destinations, plan your dream vacations, and embark on remarkable adventures with our comprehensive travel guides and services.">
 
-  <link rel='icon' href='assets/favicon.png'>
-  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/travelio.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link href='styles/css/main.css' rel='stylesheet' type='text/css'>
 
@@ -17,7 +21,44 @@
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <header class="header">
+    <nav id="nav" class="nav container">
+      <a href="#" class="nav__logo">
+        <img src="assets/travelio.svg" alt="logo" class="logo-img">
+        <h5 class="logo__brand">Travelio</h5>
+      </a>
+
+      <div id="navMenu" class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Destinations
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Tour
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button id="navDrawer" class="nav__drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
   <script src='index.js' type='module'></script>
 </body>

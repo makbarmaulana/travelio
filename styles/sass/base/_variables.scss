@@ -1,0 +1,27 @@
+$typeface-primary: 'Inter', sans-serif;
+
+$accent-color: #059696;
+$primary-color: #136680;
+$secondary-color: #262362;
+$text-color: #1c1c1c;
+$white-color: #f2f2f2;
+$grey-color: #757575;
+$light-grey-color: #dedede;
+$background-color: #fff;
+
+$fs-small: 14px;
+$fs-normal: 16px;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$header-height: 4.5rem;
+
+$breakpoints: (
+  small: 425px,
+  medium: 768px,
+  large: 1024px,
+);

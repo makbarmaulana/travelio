@@ -1,0 +1,146 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mx;
+
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  height: $header-height;
+  background-color: $background-color;
+  box-shadow: 0 1px 16px rgba($grey-color, 0.1);
+  z-index: 99;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  @include mx.flexbox(row, center, space-between);
+}
+
+.nav__logo {
+  @include mx.flexbox(row, center);
+  gap: 0.75rem;
+
+  .logo-img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .logo__brand {
+    font-size: 1.25rem;
+    font-weight: $fw-semibold;
+    color: $accent-color;
+  }
+}
+
+.nav__menu {
+  position: fixed;
+  top: $header-height;
+  right: -100%;
+  width: 50%;
+  max-width: 17rem;
+  height: 100%;
+  background-color: $primary-color;
+  box-shadow: 1px 0 16px rgba($grey-color, 0.1);
+  transition: right 0.2s ease;
+
+  &.show-menu {
+    right: 0;
+  }
+}
+
+.nav__link {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: $fw-medium;
+  color: $white-color;
+  border-right: 3px solid transparent;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background-color: rgba($accent-color, 0.5);
+  }
+
+  &.active {
+    background-color: $accent-color;
+    border-color: $white-color;
+  }
+}
+
+.nav__drawer {
+  position: relative;
+  width: 2.5rem;
+  height: 2rem;
+
+  span {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    transition: 250ms ease-out;
+    background-color: $text-color;
+    z-index: -1;
+  }
+
+  span:nth-child(1) {
+    top: 0;
+  }
+
+  span:nth-child(2) {
+    top: 50%;
+  }
+
+  span:nth-child(3) {
+    top: 100%;
+  }
+
+  &.toggle {
+    span:nth-child(1) {
+      top: 50%;
+      transform: rotate(45deg) translateY(0);
+    }
+
+    span:nth-child(2) {
+      background-color: transparent;
+    }
+
+    span:nth-child(3) {
+      top: 50%;
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
+}
+
+/*=============== Responsive Breakpoints ===============*/
+
+@include mx.minBreakpoint(medium) {
+  .nav__menu {
+    all: unset;
+  }
+
+  .nav__list {
+    @include mx.flexbox(row, center);
+  }
+
+  .nav__link {
+    color: $text-color;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: rgba($accent-color, 0.5);
+      background-color: transparent;
+    }
+
+    &.active {
+      color: $accent-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav__drawer {
+    display: none;
+  }
+}

@@ -1,5 +1,41 @@
+@use 'variables' as *;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: $typeface-primary;
+  font-size: $fs-small;
+  font-weight: $fw-regular;
+  color: $text-color;
+  scroll-behavior: smooth;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button {
+  display: inline-block;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-user-drag: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+ul, ol {
+  list-style: none;
 }
