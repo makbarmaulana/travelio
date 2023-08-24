@@ -1,4 +1,10 @@
+@use '../base/mixins' as mx;
+
 .container {
   max-width: 90%;
   margin-inline: auto;
+
+  @include mx.minBreakpoint(medium) {
+    max-width: 85%;
+  }
 }

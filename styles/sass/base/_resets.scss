@@ -23,8 +23,6 @@ a {
 
 button {
   display: inline-block;
-  background-color: transparent;
-  border-color: transparent;
   -webkit-user-drag: none;
   white-space: nowrap;
   cursor: pointer;
@@ -36,6 +34,7 @@ img {
   -webkit-user-drag: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }

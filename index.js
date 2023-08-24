@@ -12,3 +12,17 @@ const toggleDrawer = ({ target }) => {
 };
 
 document.addEventListener('click', toggleDrawer);
+
+const heroContainer = document.querySelector('#hero');
+const heroBackground = document.querySelector('.background__image');
+
+heroContainer.addEventListener('click', ({ target }) => {
+  if (target.classList.contains('content__image')) {
+    heroBackground.classList.remove('flashing');
+
+    setTimeout(() => {
+      heroBackground.src = target.src;
+      heroBackground.classList.add('flashing');
+    }, 100);
+  }
+});

@@ -1,0 +1,30 @@
+.hero__section {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/images/hero-img-1.webp") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.hero {
+  position: relative;
+  border: 1px solid red;
+  height: 100%;
+  padding-top: 9.5rem;
+}
+
+.hero__header {
+  max-width: 30rem;
+}
+
+.hero__subtitle {
+  border: 1px solid red;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.hero__title {
+  font-size: 1.125rem;
+  color: #fff;
+}/*# sourceMappingURL=hero.css.map */
