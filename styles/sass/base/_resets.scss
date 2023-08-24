@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as mx;
 
 * {
   margin: 0;
@@ -12,6 +13,10 @@ html {
   font-weight: $fw-regular;
   color: $text-color;
   scroll-behavior: smooth;
+
+  @include mx.minBreakpoint(medium) {
+    font-size: $fs-normal;
+  }
 }
 
 a {
