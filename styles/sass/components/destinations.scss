@@ -1,0 +1,184 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mx;
+
+.destinations {
+  position: relative;
+  padding-top: calc($header-height + 3rem);
+}
+
+.destinations__header {
+  background-color: $light-grey-color;
+  @include mx.flexbox(column, center, center);
+  gap: 1rem;
+  height: 20rem;
+  border-radius: 3rem;
+  text-align: center;
+  padding: 0.5rem;
+
+  .subtitle {
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: $fw-semibold;
+    color: $accent-color;
+    letter-spacing: 0.1rem;
+    width: max-content;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: -3rem;
+      transform: translateY(-50%);
+      width: 2rem;
+      height: 2px;
+      background-color: $accent-color;
+    }
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: $fw-semibold;
+    color: $text-color;
+
+    span {
+      font-weight: $fw-bold;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: $fw-regular;
+    line-height: 1.6;
+    color: $text-color;
+    max-width: 40rem;
+  }
+}
+
+.destinations__cta {
+  margin: 4rem 0;
+  gap: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: $white-color;
+  box-shadow: 1px 0 16px rgba($grey-color, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
+  justify-content: center;
+  align-items: center;
+
+  & > div:not(:last-child) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+
+    .icon__box {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: rgba($accent-color, 0.5);
+      @include mx.flexbox(row, center, center);
+      overflow: hidden;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-weight: $fw-semibold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+  }
+
+  .get-started {
+    width: 100%;
+  }
+}
+
+.destinations__gallery {
+  display: grid;
+  gap: 3rem;
+
+  .view-more {
+    width: max-content;
+    justify-self: center;
+  }
+}
+
+.gallery__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+
+  & > * {
+  }
+}
+
+.gallery__card {
+  padding: 0.5rem;
+  border-radius: 1em;
+  border: 1px solid $light-grey-color;
+  box-shadow: 1px 0 16px rgba($grey-color, 0.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 1px 0 16px rgba($grey-color, 0.3);
+  }
+
+  .card__thumbnail {
+    overflow: hidden;
+    border-radius: 1em;
+    margin-bottom: 1rem;
+    height: 20rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card__info {
+    @include mx.flexbox(row, center, space-between);
+    padding-inline: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    .info__location {
+      @include mx.flexbox(column);
+      gap: 0.5rem;
+
+      h6 {
+        font-size: 0.875rem;
+        font-weight: $fw-semibold;
+      }
+
+      .location__detail {
+        @include mx.flexbox(row, center);
+        white-space: nowrap;
+
+        .icon-accent {
+          font-size: 1rem;
+        }
+
+        p {
+          margin-left: 0.25rem;
+          font-size: 0.75rem;
+          font-weight: $fw-medium;
+        }
+      }
+    }
+
+    .info__price {
+      font-size: 0.875rem;
+      font-weight: $fw-medium;
+      color: $accent-color;
+      background-color: rgba($accent-color, 0.1);
+      padding: 0.5em 1.125em;
+      border-radius: 0.5em;
+    }
+  }
+}

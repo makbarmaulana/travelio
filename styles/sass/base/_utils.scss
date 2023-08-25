@@ -1,5 +1,20 @@
 @use 'variables' as *;
 
+.icon-white {
+  color: $white-color;
+  font-size: 1.5rem;
+}
+
+.icon-black {
+  color: $black-color;
+  font-size: 1.5rem;
+}
+
+.icon-accent {
+  color: $accent-color;
+  font-size: 1.5rem;
+}
+
 .btn {
   background-color: transparent;
   border-color: transparent;
