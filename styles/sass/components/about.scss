@@ -1,0 +1,185 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as mx;
+
+.about {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: $header-height;
+  display: grid;
+  gap: 3rem;
+}
+
+.about__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .subtitle {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: $fw-semibold;
+    color: $accent-color;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    width: max-content;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: -100%;
+      transform: translateY(-50%);
+      width: 3rem;
+      height: 2px;
+      background-color: $accent-color;
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: $fw-semibold;
+    color: $text-color;
+
+    span {
+      font-weight: $fw-bold;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: $fw-regular;
+    line-height: 1.6;
+    color: $text-color;
+    max-width: 20rem;
+  }
+
+  .detail {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 0.5rem;
+
+    span {
+      background-color: #f2f2f2;
+      min-width: 9rem;
+      padding: 0.75em 1.5em;
+      border-radius: 0.875em;
+    }
+
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.about__thumbnails {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .img__box {
+    position: relative;
+    min-width: 20em;
+    min-height: 22em;
+    position: relative;
+  }
+}
+
+.thumbnail__image {
+  position: absolute;
+  object-fit: cover;
+  border: 0.2em solid $white-color;
+  border-radius: 2em;
+  filter: drop-shadow(4px 8px 16px rgba($grey-color, 0.5));
+
+  &.img-1 {
+    width: 15em;
+    height: 15em;
+  }
+
+  &.img-2 {
+    width: 13em;
+    height: 13em;
+    transform: translate(40%, 50%);
+  }
+
+  &.img-3 {
+    width: 8em;
+    height: 8em;
+    transform: translate(150%, 20%);
+  }
+}
+
+/*=============== Responsive Breakpoints ===============*/
+
+@include mx.minBreakpoint(medium) {
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about__content {
+    order: 1;
+
+    .description {
+      max-width: unset;
+    }
+
+    .detail {
+      margin-top: 1rem;
+    }
+  }
+
+  .thumbnail__image {
+    &.img-1 {
+      width: 16em;
+      height: 16em;
+    }
+
+    &.img-2 {
+      width: 14em;
+      height: 14em;
+    }
+    &.img-3 {
+      width: 9em;
+      height: 9em;
+      transform: translate(125%, 20%);
+    }
+  }
+}
+
+@include mx.minBreakpoint(large) {
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .thumbnail__image {
+    &.img-1 {
+      width: 22em;
+      height: 22em;
+    }
+
+    &.img-2 {
+      width: 18em;
+      height: 18em;
+    }
+    &.img-3 {
+      width: 12em;
+      height: 12em;
+      transform: translate(130%, 20%);
+    }
+  }
+}

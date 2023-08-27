@@ -8,8 +8,12 @@
   <meta description=""
     content="Explore the world with Travelio - your gateway to unforgettable journeys. Discover stunning destinations, plan your dream vacations, and embark on remarkable adventures with our comprehensive travel guides and services.">
 
-  <link rel='icon' href='assets/favicon.png'>
-  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/travelio.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link href='styles/css/main.css' rel='stylesheet' type='text/css'>
 
@@ -17,9 +21,438 @@
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <header class="header">
+    <nav id="nav" class="nav container">
+      <a href="#" class="nav__logo">
+        <img src="assets/travelio.svg" alt="logo" class="logo-img">
+        <h5 class="logo__brand">Travelio</h5>
+      </a>
 
-  <script src='index.js' type='module'></script>
+      <div id="navMenu" class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#destinations" class="nav__link">Destinations
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#testimonial" class="nav__link">Testimonial
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button id="navDrawer" class="btn nav__drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero__section overlay">
+    <img src="assets/images/hero-img-1.webp" alt="image" class="background__image">
+    <div class="hero container">
+      <div class="hero__header">
+        <h2 class="hero__subtitle">
+          Explore the World
+        </h2>
+        <h1 class="hero__title">
+          Unleash Your Travel Dreams
+        </h1>
+        <p class="hero__description">
+          Immerse yourself in vibrant cultures, and create memories that last a lifetime. Let's make your travel dreams
+          a reality.
+        </p>
+        <button type="button" class="btn-primary btn__hero">
+          Get Started
+        </button>
+        </>
+      </div>
+
+      <div class="hero__content">
+        <div class="image__box box-1">
+          <img src="assets/images/hero-img-1.webp" alt="image" class="content__image img-1">
+          <img src="assets/images/hero-img-2.webp" alt="image" class="content__image img-2">
+        </div>
+        <div class="image__box box-2">
+          <img src="assets/images/hero-img-3.webp" alt="image" class="content__image img-3">
+          <img src="assets/images/hero-img-4.webp" alt="image" class="content__image img-4">
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="main__section">
+      <div class="main container">
+        <section id="about" class="about">
+          <div class="about__content">
+            <h6 class="subtitle">About</h6>
+            <h3 class="title">
+              <span>We Recomend</span> <br>
+              Beautiful Destinations <br>
+              Every Month
+            </h3>
+            <p class="description">
+              Let's choose dream destinations here we provide many destinations and we offer the best destinations every
+              week.
+            </p>
+            <div class="detail">
+              <span class="explore">
+                <h5>2000+</h5>
+                <p>Our Explorers</p>
+              </span>
+              <span class="destinations">
+                <h5>100+</h5>
+                <p>Destinations</p>
+              </span>
+              <span class="experience">
+                <h5>20+</h5>
+                <p>Years Experience</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="about__thumbnails">
+            <div class="img__box">
+              <img src="assets/images/about-img-1.webp" alt="image" class="thumbnail__image img-1">
+              <img src="assets/images/about-img-2.webp" alt="image" class="thumbnail__image img-2">
+              <img src="assets/images/about-img-3.webp" alt="image" class="thumbnail__image img-3">
+            </div>
+          </div>
+        </section>
+
+        <section id="destinations" class="destinations">
+          <div class="destinations__header">
+            <h6 class="subtitle">Top Destinations</h6>
+            <h3 class="title"><span>Let's Explore</span> Your Dream Destinations Here!</h3>
+            <p class="description">
+              We have recomended popular destinations every week. So you don't have to worry about your dream
+              destination with Travelio.
+            </p>
+          </div>
+
+          <div class="destinations__cta">
+            <div class="location">
+              <div class="icon__box">
+                <i class="ri-map-pin-line icon-white"></i>
+              </div>
+              <div class="info">
+                <h5>Location</h5>
+                <p>Where are you going?</p>
+              </div>
+            </div>
+            <div class="person">
+              <div class="icon__box">
+                <i class="ri-group-line icon-white"></i>
+              </div>
+              <div class="info">
+                <h5>Person</h5>
+                <p>How many person?</p>
+              </div>
+            </div>
+            <div class="checkin">
+              <div class="icon__box">
+                <i class="ri-calendar-line icon-white"></i>
+              </div>
+              <div class="info">
+                <h5>Check In</h5>
+                <p>24 August 2023</p>
+              </div>
+            </div>
+            <div class="checkout">
+              <div class="icon__box">
+                <i class="ri-calendar-line icon-white"></i>
+              </div>
+              <div class="info">
+                <h5>Check Out</h5>
+                <p>27 August 2023</p>
+              </div>
+            </div>
+            <div class="get-started">
+              <button class="btn-primary get-started">Get Started</button>
+            </div>
+          </div>
+
+          <div class="destinations__gallery">
+            <div class="gallery__wrapper">
+
+              <div class="gallery__card">
+                <div class="card__thumbnail">
+                  <img src="assets/images/destination-img-1.webp" alt="image">
+                </div>
+                <div class="card__info">
+                  <div class="info__location">
+                    <h6>Sirithan Beach</h6>
+                    <div class="location__detail">
+                      <i class="ri-map-pin-line icon-accent"></i>
+                      <p>Ao Nang, Krabi, Thailand</p>
+                    </div>
+                  </div>
+                  <div class="info__price">
+                    <p>$200</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gallery__card">
+                <div class="card__thumbnail">
+                  <img src="assets/images/destination-img-2.webp" alt="image">
+                </div>
+                <div class="card__info">
+                  <div class="info__location">
+                    <h6>Siargao Island</h6>
+                    <div class="location__detail">
+                      <i class="ri-map-pin-line icon-accent"></i>
+                      <p>Siargao island, Philippines</p>
+                    </div>
+                  </div>
+                  <div class="info__price">
+                    <p>$200</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gallery__card">
+                <div class="card__thumbnail">
+                  <img src="assets/images/destination-img-3.webp" alt="image">
+                </div>
+                <div class="card__info">
+                  <div class="info__location">
+                    <h6>Hisma Desert</h6>
+                    <div class="location__detail">
+                      <i class="ri-map-pin-line icon-accent"></i>
+                      <p>NEOM, Saudi Arabia</p>
+                    </div>
+                  </div>
+                  <div class="info__price">
+                    <p>$200</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gallery__card">
+                <div class="card__thumbnail">
+                  <img src="assets/images/destination-img-4.webp" alt="image">
+                </div>
+                <div class="card__info">
+                  <div class="info__location">
+                    <h6>Cappadocia</h6>
+                    <div class="location__detail">
+                      <i class="ri-map-pin-line icon-accent"></i>
+                      <p>Cappadocia, Turkey</p>
+                    </div>
+                  </div>
+                  <div class="info__price">
+                    <p>$200</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gallery__card">
+                <div class="card__thumbnail">
+                  <img src="assets/images/destination-img-5.webp" alt="image">
+                </div>
+                <div class="card__info">
+                  <div class="info__location">
+                    <h6>Pragser Wildsee</h6>
+                    <div class="location__detail">
+                      <i class="ri-map-pin-line icon-accent"></i>
+                      <p>Pragser Wildsee, Italy</p>
+                    </div>
+                  </div>
+                  <div class="info__price">
+                    <p>$200</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gallery__card">
+                <div class="card__thumbnail">
+                  <img src="assets/images/destination-img-6.webp" alt="image">
+                </div>
+                <div class="card__info">
+                  <div class="info__location">
+                    <h6>Glenfinnan Viaduct</h6>
+                    <div class="location__detail">
+                      <i class="ri-map-pin-line icon-accent"></i>
+                      <p>Glenfinnan Viaduct, United Kingdom</p>
+                    </div>
+                  </div>
+                  <div class="info__price">
+                    <p>$200</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="btn-primary view-more">View More</button>
+          </div>
+        </section>
+
+        <section id="testimonial" class="testimonial">
+          <div class="testimonial__header">
+            <h6 class="subtitle">What They Say</h6>
+            <h3 class="title">
+              <span>What Our Customer</span> <br>
+              Say About Us
+            </h3>
+
+            <div class="testimonial__card">
+              <div class="card__customer-info">
+                <div class="customer__avatar">
+                  <img src="assets/images/customer-img.webp" alt="customer-avatar">
+                </div>
+                <div class="customer__name">
+                  <h5>Alexander Hipp</h5>
+                  <p>Travel Enthusias</p>
+                </div>
+              </div>
+
+              <div class="card__description">
+                <q>
+                  This platform is very helpful. because there are many beautiful destinations here and this platform
+                  really helps me in finding beautiful destinations and also very good service so i really like to use
+                  Travelio when i want to go travelling with my familly.
+                </q>
+
+                <div class="review__star">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial__thumbnail">
+            <img src="assets/images/testimonial-img.webp" alt="testimonial-thumnail">
+          </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer container">
+        <div class="footer__header">
+          <div class="logo__wrapper">
+            <a href="#" class="logo__content">
+              <img src="assets/travelio.svg" alt="logo" class="logo-img">
+              <h5 class="logo__brand">Travelio</h5>
+            </a>
+          </div>
+
+          <div class="footer__subscribe">
+            <i class="ri-mail-line mail-icon"></i>
+            <input class="subscribe__input" type="text" placeholder="Your email">
+            <button class="btn-primary subscribe__button">
+              <i class="ri-send-plane-fill subscribe-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <div class="content__wrapper">
+            <h5>About</h5>
+            <ul class="content__list">
+              <li class="content__item">
+                <a href="#" class="content__link">Home</a>
+              </li>
+              <li class="content__item">
+                <a href="#about" class="content__link">About
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#destinations" class="content__link">Destinations
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#testimonial" class="content__link">Testimonial
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content__wrapper">
+            <h5>Company</h5>
+            <ul class="content__list">
+              <li class="content__item">
+                <a href="#" class="content__link">Our Team</a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link">Partner with Us
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link">FAQ
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link">Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content__wrapper">
+            <h5>Support</h5>
+            <ul class="content__list">
+              <li class="content__item">
+                <a href="#" class="content__link">Account</a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link">Support Center
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link">Feedback
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link">Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content__wrapper">
+            <h5>Social Media</h5>
+            <ul class="content__list social">
+              <li class="content__item">
+                <a href="#" class="content__link social-icon">
+                  <i class="ri-instagram-line icon-accent"></i>
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link social-icon">
+                  <i class="ri-facebook-fill icon-accent"></i>
+                </a>
+              </li>
+              <li class="content__item">
+                <a href="#" class="content__link social-icon">
+                  <i class="ri-twitter-fill icon-accent"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <p>&copy;2023 Travelio. Copyright and All rights reserved.</p>
+        </div>
+    </footer>
+
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src='index.js' type='module'></script>
 </body>
 
 </html>

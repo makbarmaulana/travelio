@@ -1,5 +1,49 @@
+@use 'variables' as *;
+@use 'mixins' as mx;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: $typeface-primary;
+  font-size: $fs-small;
+  font-weight: $fw-regular;
+  color: $text-color;
+  scroll-behavior: smooth;
+
+  @include mx.minBreakpoint(medium) {
+    font-size: $fs-normal;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button {
+  display: inline-block;
+  -webkit-user-drag: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+main {
+  padding-bottom: 20rem;
 }
